@@ -1,0 +1,12 @@
+#Insertion in a heap sort
+arr = [10,20,60,5,7]
+
+arr1 = [0]*(len(arr)+1)
+
+i = 1
+while i>0:
+    arr1[i]=arr[i-1]
+    if i/2 >= 1 and arr1[i-1]>arr1[i]:
+            arr1[i-1],arr1[i] = arr1[i],arr1[i-1]
+            
+print(arr1)

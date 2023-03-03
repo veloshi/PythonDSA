@@ -1,0 +1,46 @@
+
+class Stack1:
+    def __init__(self):
+        self.max = 100
+        self.list1 = [None]*100
+        self.top = -1
+        print(self.top)
+    def push(self,x):
+    
+        if self.top >= (self.max-1) :
+            print("overflow")
+        else:
+            self.top = self.top +1 
+            #print(self.top)
+            self.list1[self.top] = x
+            #print(self.list1)
+
+    def pop(self):
+        if self.top == -1:
+            print("underflow")
+        else:
+            temp = self.list1[self.top]
+            self.top = self.top -1
+    def peek(self):
+        return self.list1[self.top]
+    
+test1 = Stack1()
+test1.push(10)
+print(test1.peek())
+test1.pop()
+print(test1.peek())
+test1.push(10)
+test1.push(11)
+test1.push(10)
+test1.push(12)
+print(test1.peek())
+test1.pop()
+test1.pop()
+print(test1.peek())
+test1.pop()
+print(test1.peek())
+test1.pop()
+print(test1.peek())
+
+        
+

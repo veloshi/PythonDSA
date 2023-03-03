@@ -1,0 +1,35 @@
+# if n == 0:
+        #     return False
+        # while(n !=1):
+        #     if n%2 != 0:
+        #         return False
+        #     n = n//2
+        # return True
+        #     #n ka binary convert karu to 2ki power 0 bit agar set he to mtlb 2 ki power me ni hoga,,,,,,,,,
+
+    #     #     #tc O(logn) AUX = O(1)
+    #     def recursivepowof2(m):
+    #         if m == 1:
+    #             return True
+    #         elif m%2 != 0 or m == 0:
+    #             return False
+    #         else:
+    #             return recursivepowof2(m//2)
+    # #tc O(logn) AUX = O(log N)
+    #     return recursivepowof2(n)
+def countbits(n):
+    if n <0:
+        return False
+    count = 0
+    while(n != 0):
+        if n&1 == 1:
+            count = count +1
+        n = n>>1
+    
+    if count == 1:
+        return True
+    return False
+    #tc O(logn) AUX = O(1)
+#print(loopspowof2(8))
+#print(recursivepowof2(8888))
+print(countbits(-1))

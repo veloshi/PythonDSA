@@ -1,0 +1,9 @@
+minim = arr1[0]
+def minim(arr1,i,n):
+    if (n == 1):
+        return arr1[i]
+    else:
+         return min(arr1[i],minim(arr1,i+1,n-1))
+        
+n = len(arr1)
+print(minim(arr1,0,n))
