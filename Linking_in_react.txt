@@ -1,0 +1,82 @@
+import './App.css';
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+
+import { Routes ,Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+  
+// import Home component
+import Home from "./components/Home";
+// import About component
+import About from "./components/Aboutus";
+// import ContactUs component
+import ContactUs from "./components/Contactus";
+  
+function App() {
+  return (
+    <div>
+    <>
+      {/* This is the alias of BrowserRouter i.e. Router */}
+      <Router>
+        <Routes>
+          {/* This route is for home component 
+          with exact path "/", in component props 
+          we passes the imported component*/}
+          <Route path='/' element={<Home/>} />
+            
+          {/* This route is for about component 
+          with exact path "/about", in component 
+          props we passes the imported component*/}
+          <Route path='/about' element={<About/>} />
+          
+            
+          {/* This route is for contactus component
+          with exact path "/contactus", in 
+          component props we passes the imported component*/}
+          <Route path="/contactus" element={<ContactUs/>} />
+            
+          {/* If any route mismatches the upper 
+          route endpoints then, redirect triggers 
+          and redirects app to home component with to="/" */}
+          {/* <Navigate to="/" /> */}
+        </Routes>
+      </Router>
+    </>
+    </div>
+  );
+}
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+import React from "react";
+// importing Link from react-router-dom to navigate to
+// different end points.
+import { Link } from "react-router-dom";
+
+const Home = () => {
+return (
+    <div>
+    <h1>Home Page</h1>
+    <br />
+    <ul>
+        <li>
+        {/* Endpoint to route to Home component */}
+        <Link to="/">Home</Link>
+        </li>
+        <li>
+        {/* Endpoint to route to About component */}
+        <Link to="/about">About</Link>
+        </li>
+        <li>
+        {/* Endpoint to route to Contact Us component */}
+        <Link to="/contactus">Contact Us</Link>
+        </li>
+    </ul>
+    </div>
+);
+};
+
+export default Home;

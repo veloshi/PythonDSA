@@ -1,0 +1,3 @@
+git remote add origin https://github.com/veloshi/react_deploy_testify.git
+git branch -M main
+git push -u origin main

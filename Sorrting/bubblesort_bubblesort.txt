@@ -1,0 +1,19 @@
+arr = [11,2,3,12]
+
+# for i in range(len(arr)):
+#     for j in range(len(arr)-1):
+#         if arr[j] > arr[j+1]:
+#             arr[j],arr[j+1] = arr[j+1],arr[j]
+            
+swap = False
+for i in range(len(arr)):
+    swap = True
+    for j in range(i,len(arr)-1):
+        if arr[j] > arr[j+1]:
+            arr[j],arr[j+1] = arr[j+1],arr[j]
+        else:
+            swap = False
+            print("break")
+            break
+    
+print(arr)
