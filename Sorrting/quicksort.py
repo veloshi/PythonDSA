@@ -1,6 +1,8 @@
 def quicksort(arr,left,right):
     if left<right:
+        
         partition_pos = partition(arr,left,right)
+        #print(partition_pos)
         quicksort(arr,left,partition_pos-1)
         quicksort(arr,partition_pos+1,right)
 
@@ -22,6 +24,6 @@ def partition(arr,left,right):
                                                                                                                                  
     return i
 
-arr = [22,11,33,55,44]
+arr = [5,3,8,6,4,7,3,1]
 quicksort(arr,0,len(arr)-1)
 print(arr)
