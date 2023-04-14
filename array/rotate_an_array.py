@@ -15,7 +15,7 @@ list1 = rever(0,length,res)
 rever(0,k-1,list1)
 rever(k,length,list1)
 print(list1)
-result=""
-for i in list1:
-    result = result+str(i)
+result="".join(map(str,list1))
+# for i in list1:
+#     result = result+str(i)
 print(result)
